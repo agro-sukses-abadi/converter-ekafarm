@@ -1,0 +1,17 @@
+{
+  "name": "WebP Image Converter",
+  "short_name": "WebP Converter",
+  "description": "Convert images to WebP locally in your browser.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#467f43",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
