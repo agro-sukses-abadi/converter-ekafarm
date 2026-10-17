@@ -47,19 +47,19 @@ export const StatsCard = ({ items }: { items: ImageItem[] }) => {
 
   const metrics = [
     { label: 'Original Size', value: formatBytes(original), icon: PackageCheck, tone: 'text-slate-100' },
-    { label: 'Converted Size', value: formatBytes(converted), icon: Zap, tone: 'text-[#00ff66]' },
-    { label: 'Saved Bytes', value: formatBytes(saved), icon: Activity, tone: 'text-[#4fdcff]' },
-    { label: 'Reduction', value: formatPercent(reduction), icon: Activity, tone: 'text-[#00ff66]' },
+    { label: 'Converted Size', value: formatBytes(converted), icon: Zap, tone: 'text-brand' },
+    { label: 'Saved Bytes', value: formatBytes(saved), icon: Activity, tone: 'text-accent' },
+    { label: 'Reduction', value: formatPercent(reduction), icon: Activity, tone: 'text-brand' },
     { label: 'Total Images', value: Math.round(images).toString(), icon: Image, tone: 'text-white' },
   ];
 
   return (
-    <Card title="Statistics" icon={<Activity size={17} className="text-[#00ff66]" aria-hidden />}>
+    <Card title="Statistics" icon={<Activity size={17} className="text-brand" aria-hidden />}>
       <div className="grid gap-3">
         {metrics.map((metric) => {
           const Icon = metric.icon;
           return (
-            <div key={metric.label} className="rounded-2xl border border-[#243041] bg-[#0a0e14] p-4">
+            <div key={metric.label} className="rounded-2xl border border-line bg-canvas p-4">
               <div className="flex items-center justify-between text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
                 {metric.label}
                 <Icon size={15} aria-hidden />

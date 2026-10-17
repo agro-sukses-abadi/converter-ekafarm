@@ -10,7 +10,7 @@ export const QualitySlider = ({
       <label htmlFor="quality" className="text-sm font-semibold text-slate-200">
         WebP Quality
       </label>
-      <span className="font-mono-stat rounded-lg bg-[#0a0e14] px-2 py-1 text-sm text-[#00ff66]">{value}</span>
+      <span className="font-mono-stat rounded-lg bg-canvas px-2 py-1 text-sm text-brand">{value}</span>
     </div>
     <input
       id="quality"

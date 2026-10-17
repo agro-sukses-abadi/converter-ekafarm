@@ -239,7 +239,7 @@ export const ConverterPage = () => {
         <motion.section
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid-surface min-h-[520px] rounded-2xl border border-[#243041] bg-[#121820]/35 p-3 sm:p-4"
+          className="grid-surface min-h-[520px] rounded-2xl border border-line bg-surface/35 p-3 sm:p-4"
           aria-label="Image previews"
         >
           <PreviewGrid items={items} onRemove={removeItem} onDownload={downloadItem} onCopy={copyItem} />

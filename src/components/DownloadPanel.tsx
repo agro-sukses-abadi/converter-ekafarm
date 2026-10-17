@@ -22,7 +22,7 @@ export const DownloadPanel = ({
   const hasItems = items.length > 0;
 
   return (
-    <Card title="Batch Actions" icon={<Package size={17} className="text-[#00ff66]" aria-hidden />}>
+    <Card title="Batch Actions" icon={<Package size={17} className="text-brand" aria-hidden />}>
       <div className="space-y-3">
         <Button
           type="button"
@@ -54,7 +54,7 @@ export const DownloadPanel = ({
           Clear Queue
         </Button>
       </div>
-      <div className="mt-5 rounded-2xl border border-[#243041] bg-[#0a0e14] p-4 text-sm text-slate-400">
+      <div className="mt-5 rounded-2xl border border-line bg-canvas p-4 text-sm text-slate-400">
         <p className="font-bold text-slate-200">{convertedCount} converted</p>
         <p className="mt-1">Multiple converted files download as a ZIP archive.</p>
       </div>

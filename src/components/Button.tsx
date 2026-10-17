@@ -10,9 +10,9 @@ interface ButtonProps extends HTMLMotionProps<'button'> {
 
 const variants = {
   primary:
-    'border-[#00ff66]/70 bg-[#00ff66] text-[#06100b] shadow-[0_0_26px_rgba(0,255,102,.18)] hover:bg-[#33ff88]',
-  secondary: 'border-[#243041] bg-[#121820] text-slate-100 hover:border-[#00ff66]/50 hover:text-white',
-  ghost: 'border-transparent bg-transparent text-slate-300 hover:bg-[#121820] hover:text-white',
+    'border-brand/70 bg-brand text-on-brand shadow-glow-md hover:bg-brand-hover',
+  secondary: 'border-line bg-surface text-slate-100 hover:border-brand/50 hover:text-white',
+  ghost: 'border-transparent bg-transparent text-slate-300 hover:bg-surface hover:text-white',
   danger: 'border-red-400/30 bg-red-500/10 text-red-200 hover:bg-red-500/20',
 };
 

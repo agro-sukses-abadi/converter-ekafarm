@@ -33,8 +33,8 @@ export const UploadZone = ({ onFiles }: UploadZoneProps) => {
       onDrop={handleDrop}
       className={`rounded-2xl border border-dashed p-5 text-center transition ${
         isDragging
-          ? 'border-[#00ff66] bg-[#00ff66]/10 shadow-[0_0_40px_rgba(0,255,102,.14)]'
-          : 'border-[#243041] bg-[#121820]/55'
+          ? 'border-brand bg-brand/10 shadow-glow-lg'
+          : 'border-line bg-surface/55'
       }`}
     >
       <input
@@ -48,7 +48,7 @@ export const UploadZone = ({ onFiles }: UploadZoneProps) => {
           event.target.value = '';
         }}
       />
-      <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-[#00ff66]/10 text-[#00ff66]">
+      <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-brand">
         <Upload size={26} aria-hidden />
       </div>
       <h2 className="font-heading text-xl font-black text-white">Upload Images</h2>

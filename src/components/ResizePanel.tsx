@@ -22,8 +22,8 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
             type="button"
             className={`focus-ring rounded-xl border px-2 py-2 text-xs font-bold transition ${
               settings.resizeMode === mode.value
-                ? 'border-[#00ff66] bg-[#00ff66]/12 text-[#33ff88]'
-                : 'border-[#243041] bg-[#0a0e14] text-slate-400 hover:text-white'
+                ? 'border-brand bg-brand/12 text-brand-hover'
+                : 'border-line bg-canvas text-slate-400 hover:text-white'
             }`}
             onClick={() => onChange({ ...settings, resizeMode: mode.value })}
           >
@@ -37,7 +37,7 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
       <label className="text-sm font-semibold text-slate-300">
         Width
         <input
-          className="focus-ring mt-2 w-full rounded-xl border border-[#243041] bg-[#0a0e14] px-3 py-2 text-white"
+          className="focus-ring mt-2 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-white"
           type="number"
           min="1"
           value={settings.customWidth}
@@ -48,7 +48,7 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
       <label className="text-sm font-semibold text-slate-300">
         Height
         <input
-          className="focus-ring mt-2 w-full rounded-xl border border-[#243041] bg-[#0a0e14] px-3 py-2 text-white"
+          className="focus-ring mt-2 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-white"
           type="number"
           min="1"
           value={settings.customHeight}
@@ -58,10 +58,10 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
       </label>
     </div>
 
-    <label className="flex items-center justify-between gap-3 rounded-xl border border-[#243041] bg-[#0a0e14] px-3 py-3 text-sm font-semibold text-slate-200">
+    <label className="flex items-center justify-between gap-3 rounded-xl border border-line bg-canvas px-3 py-3 text-sm font-semibold text-slate-200">
       Maintain aspect ratio
       <input
-        className="h-5 w-5 accent-[#00ff66]"
+        className="h-5 w-5 accent-brand"
         type="checkbox"
         checked={settings.maintainAspectRatio}
         onChange={(event) => onChange({ ...settings, maintainAspectRatio: event.target.checked })}

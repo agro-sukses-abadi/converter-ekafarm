@@ -27,7 +27,7 @@ export const ToastStack = ({
             exit={{ opacity: 0, x: 24, scale: 0.96 }}
             className="cyber-card flex items-start gap-3 rounded-2xl p-4"
           >
-            <div className="mt-0.5 text-[#00ff66]">
+            <div className="mt-0.5 text-brand">
               <Icon size={18} aria-hidden />
             </div>
             <div className="min-w-0 flex-1">
