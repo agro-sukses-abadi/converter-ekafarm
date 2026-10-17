@@ -46,11 +46,11 @@ export const StatsCard = ({ items }: { items: ImageItem[] }) => {
   const images = useAnimatedNumber(totals.images);
 
   const metrics = [
-    { label: 'Original Size', value: formatBytes(original), icon: PackageCheck, tone: 'text-slate-100' },
+    { label: 'Original Size', value: formatBytes(original), icon: PackageCheck, tone: 'text-ink' },
     { label: 'Converted Size', value: formatBytes(converted), icon: Zap, tone: 'text-brand' },
-    { label: 'Saved Bytes', value: formatBytes(saved), icon: Activity, tone: 'text-accent' },
+    { label: 'Saved Bytes', value: formatBytes(saved), icon: Activity, tone: 'text-brand-hover' },
     { label: 'Reduction', value: formatPercent(reduction), icon: Activity, tone: 'text-brand' },
-    { label: 'Total Images', value: Math.round(images).toString(), icon: Image, tone: 'text-white' },
+    { label: 'Total Images', value: Math.round(images).toString(), icon: Image, tone: 'text-ink-strong' },
   ];
 
   return (
@@ -60,7 +60,7 @@ export const StatsCard = ({ items }: { items: ImageItem[] }) => {
           const Icon = metric.icon;
           return (
             <div key={metric.label} className="rounded-2xl border border-line bg-canvas p-4">
-              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
+              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-[0.14em] text-ink-faint">
                 {metric.label}
                 <Icon size={15} aria-hidden />
               </div>

@@ -14,7 +14,7 @@ const resizeModes: { value: ResizeMode; label: string }[] = [
 export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
   <div className="space-y-4">
     <div>
-      <p className="mb-2 text-sm font-semibold text-slate-200">Resize</p>
+      <p className="mb-2 text-sm font-semibold text-ink">Resize</p>
       <div className="grid grid-cols-3 gap-2">
         {resizeModes.map((mode) => (
           <button
@@ -23,7 +23,7 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
             className={`focus-ring rounded-xl border px-2 py-2 text-xs font-bold transition ${
               settings.resizeMode === mode.value
                 ? 'border-brand bg-brand/12 text-brand-hover'
-                : 'border-line bg-canvas text-slate-400 hover:text-white'
+                : 'border-line bg-canvas text-ink-muted hover:text-ink-strong'
             }`}
             onClick={() => onChange({ ...settings, resizeMode: mode.value })}
           >
@@ -34,10 +34,10 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
     </div>
 
     <div className="grid grid-cols-2 gap-3">
-      <label className="text-sm font-semibold text-slate-300">
+      <label className="text-sm font-semibold text-ink-soft">
         Width
         <input
-          className="focus-ring mt-2 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-white"
+          className="focus-ring mt-2 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-ink-strong"
           type="number"
           min="1"
           value={settings.customWidth}
@@ -45,10 +45,10 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
           onChange={(event) => onChange({ ...settings, customWidth: Number(event.target.value) })}
         />
       </label>
-      <label className="text-sm font-semibold text-slate-300">
+      <label className="text-sm font-semibold text-ink-soft">
         Height
         <input
-          className="focus-ring mt-2 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-white"
+          className="focus-ring mt-2 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-ink-strong"
           type="number"
           min="1"
           value={settings.customHeight}
@@ -58,7 +58,7 @@ export const ResizePanel = ({ settings, onChange }: ResizePanelProps) => (
       </label>
     </div>
 
-    <label className="flex items-center justify-between gap-3 rounded-xl border border-line bg-canvas px-3 py-3 text-sm font-semibold text-slate-200">
+    <label className="flex items-center justify-between gap-3 rounded-xl border border-line bg-canvas px-3 py-3 text-sm font-semibold text-ink">
       Maintain aspect ratio
       <input
         className="h-5 w-5 accent-brand"

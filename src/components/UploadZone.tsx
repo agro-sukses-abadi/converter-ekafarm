@@ -51,8 +51,8 @@ export const UploadZone = ({ onFiles }: UploadZoneProps) => {
       <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-brand">
         <Upload size={26} aria-hidden />
       </div>
-      <h2 className="font-heading text-xl font-black text-white">Upload Images</h2>
-      <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-slate-400">
+      <h2 className="font-heading text-xl font-black text-ink-strong">Upload Images</h2>
+      <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-ink-muted">
         Drop files or folders here. Paste images from clipboard with Ctrl + V.
       </p>
       <Button

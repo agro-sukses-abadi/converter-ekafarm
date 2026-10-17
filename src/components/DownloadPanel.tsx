@@ -54,8 +54,8 @@ export const DownloadPanel = ({
           Clear Queue
         </Button>
       </div>
-      <div className="mt-5 rounded-2xl border border-line bg-canvas p-4 text-sm text-slate-400">
-        <p className="font-bold text-slate-200">{convertedCount} converted</p>
+      <div className="mt-5 rounded-2xl border border-line bg-canvas p-4 text-sm text-ink-muted">
+        <p className="font-bold text-ink">{convertedCount} converted</p>
         <p className="mt-1">Multiple converted files download as a ZIP archive.</p>
       </div>
     </Card>

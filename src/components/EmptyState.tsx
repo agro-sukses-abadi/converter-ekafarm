@@ -17,8 +17,8 @@ export const EmptyState = () => (
       <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
         <ImagePlus size={24} aria-hidden />
       </div>
-      <h2 className="font-heading text-2xl font-black text-white">Drop images to begin</h2>
-      <p className="mt-3 text-sm leading-6 text-slate-400">
+      <h2 className="font-heading text-2xl font-black text-ink-strong">Drop images to begin</h2>
+      <p className="mt-3 text-sm leading-6 text-ink-muted">
         Drag files or folders, browse from disk, or paste an image with Ctrl + V. PNG, JPEG, GIF, BMP, TIFF, and WebP are supported.
       </p>
     </div>

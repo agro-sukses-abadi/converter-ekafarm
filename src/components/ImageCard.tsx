@@ -23,11 +23,11 @@ export const ImageCard = memo(({ item, onRemove, onDownload, onCopy }: ImageCard
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 12, scale: 0.97 }}
       whileHover={{ y: -3 }}
-      className="cyber-card overflow-hidden rounded-2xl"
+      className="panel-card overflow-hidden rounded-2xl"
     >
       <div className="relative aspect-[4/3] bg-canvas">
         <img className="h-full w-full object-contain" src={item.previewUrl} alt="" loading="lazy" />
-        <div className="absolute left-3 top-3 rounded-full border border-line bg-canvas/85 px-2 py-1 text-xs font-bold uppercase text-accent">
+        <div className="absolute left-3 top-3 rounded-full border border-line bg-canvas/85 px-2 py-1 text-xs font-bold uppercase text-brand-hover">
           {item.extension}
         </div>
         {item.status === 'processing' && (
@@ -43,16 +43,16 @@ export const ImageCard = memo(({ item, onRemove, onDownload, onCopy }: ImageCard
       <div className="p-4">
         <div className="mb-3 flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h3 className="truncate font-bold text-white" title={item.name}>
+            <h3 className="truncate font-bold text-ink-strong" title={item.name}>
               {item.name}
             </h3>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-ink-faint">
               {item.width} x {item.height}px
             </p>
           </div>
           <button
             type="button"
-            className="focus-ring shrink-0 rounded-xl p-2 text-slate-500 hover:bg-red-500/10 hover:text-red-200"
+            className="focus-ring shrink-0 rounded-xl p-2 text-ink-faint hover:bg-danger/10 hover:text-danger"
             onClick={() => onRemove(item.id)}
             aria-label={`Remove ${item.name}`}
           >
@@ -62,13 +62,13 @@ export const ImageCard = memo(({ item, onRemove, onDownload, onCopy }: ImageCard
 
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-xl border border-line bg-canvas p-3">
           <div>
-            <p className="text-xs text-slate-500">Original</p>
-            <p className="font-mono-stat text-sm text-white">{formatBytes(item.originalSize)}</p>
+            <p className="text-xs text-ink-faint">Original</p>
+            <p className="font-mono-stat text-sm text-ink-strong">{formatBytes(item.originalSize)}</p>
           </div>
           <ArrowRight size={16} className="text-brand" aria-hidden />
           <div className="text-right">
-            <p className="text-xs text-slate-500">WebP</p>
-            <p className="font-mono-stat text-sm text-white">
+            <p className="text-xs text-ink-faint">WebP</p>
+            <p className="font-mono-stat text-sm text-ink-strong">
               {item.convertedSize ? formatBytes(item.convertedSize) : '--'}
             </p>
           </div>
@@ -76,16 +76,16 @@ export const ImageCard = memo(({ item, onRemove, onDownload, onCopy }: ImageCard
 
         <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
           <div className="rounded-xl bg-surface p-3">
-            <p className="text-slate-500">Reduction</p>
+            <p className="text-ink-faint">Reduction</p>
             <p className="font-mono-stat mt-1 text-brand">{formatPercent(reduction)}</p>
           </div>
           <div className="rounded-xl bg-surface p-3">
-            <p className="text-slate-500">Saved</p>
-            <p className="font-mono-stat mt-1 text-accent">{formatBytes(saved)}</p>
+            <p className="text-ink-faint">Saved</p>
+            <p className="font-mono-stat mt-1 text-brand-hover">{formatBytes(saved)}</p>
           </div>
         </div>
 
-        {item.error && <p className="mt-3 text-sm text-red-300">{item.error}</p>}
+        {item.error && <p className="mt-3 text-sm text-danger">{item.error}</p>}
 
         <div className="mt-4 grid grid-cols-2 gap-2">
           <Button

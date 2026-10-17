@@ -25,18 +25,18 @@ export const ToastStack = ({
             initial={{ opacity: 0, x: 24, scale: 0.96 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 24, scale: 0.96 }}
-            className="cyber-card flex items-start gap-3 rounded-2xl p-4"
+            className="panel-card flex items-start gap-3 rounded-2xl p-4"
           >
             <div className="mt-0.5 text-brand">
               <Icon size={18} aria-hidden />
             </div>
             <div className="min-w-0 flex-1">
-              <p className="font-bold text-white">{toast.title}</p>
-              {toast.message && <p className="mt-1 text-sm text-slate-400">{toast.message}</p>}
+              <p className="font-bold text-ink-strong">{toast.title}</p>
+              {toast.message && <p className="mt-1 text-sm text-ink-muted">{toast.message}</p>}
             </div>
             <button
               type="button"
-              className="focus-ring rounded-lg p-1 text-slate-500 hover:text-white"
+              className="focus-ring rounded-lg p-1 text-ink-faint hover:text-ink-strong"
               onClick={() => onDismiss(toast.id)}
               aria-label="Dismiss notification"
             >

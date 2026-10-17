@@ -24,7 +24,7 @@ const DEFAULT_SETTINGS: ConverterSettings = {
   customHeight: 1080,
   maintainAspectRatio: true,
   backgroundMode: 'transparent',
-  customBackground: '#00ff66',
+  customBackground: '#467f43',
 };
 
 export const ConverterPage = () => {

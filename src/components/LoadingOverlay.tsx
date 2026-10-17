@@ -10,10 +10,10 @@ export const LoadingOverlay = ({ active }: { active: boolean }) =>
       aria-live="polite"
       aria-busy="true"
     >
-      <div className="cyber-card rounded-2xl p-6 text-center">
+      <div className="panel-card rounded-2xl p-6 text-center">
         <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-2 border-line border-t-brand" />
-        <p className="font-bold text-white">Converting images</p>
-        <p className="mt-1 text-sm text-slate-400">Rendering locally in your browser.</p>
+        <p className="font-bold text-ink-strong">Converting images</p>
+        <p className="mt-1 text-sm text-ink-muted">Rendering locally in your browser.</p>
       </div>
     </motion.div>
   ) : null;

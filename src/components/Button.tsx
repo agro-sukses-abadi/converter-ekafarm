@@ -11,9 +11,9 @@ interface ButtonProps extends HTMLMotionProps<'button'> {
 const variants = {
   primary:
     'border-brand/70 bg-brand text-on-brand shadow-glow-md hover:bg-brand-hover',
-  secondary: 'border-line bg-surface text-slate-100 hover:border-brand/50 hover:text-white',
-  ghost: 'border-transparent bg-transparent text-slate-300 hover:bg-surface hover:text-white',
-  danger: 'border-red-400/30 bg-red-500/10 text-red-200 hover:bg-red-500/20',
+  secondary: 'border-line bg-surface text-ink hover:border-brand/50 hover:text-ink-strong',
+  ghost: 'border-transparent bg-transparent text-ink-soft hover:bg-surface hover:text-ink-strong',
+  danger: 'border-danger/30 bg-danger/10 text-danger hover:bg-danger/20',
 };
 
 export const Button = ({ variant = 'secondary', icon, className = '', children, ...props }: ButtonProps) => (

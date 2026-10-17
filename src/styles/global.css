@@ -2,29 +2,40 @@
 @import 'tailwindcss';
 
 @theme static {
-  --color-canvas: #0a0e14;
-  --color-canvas-alt: #0d1219;
-  --color-surface: #121820;
-  --color-card: #171f29;
-  --color-line: #243041;
+  /* permukaan */
+  --color-canvas: #fafafa;
+  --color-canvas-alt: #f4f7f4;
+  --color-surface: #f4f7f4;
+  --color-card: #ffffff;
+  --color-line: #dee8dd;
 
-  --color-brand: #00ff66;
-  --color-brand-hover: #33ff88;
-  --color-on-brand: #06100b;
-  --color-accent: #4fdcff;
+  /* brand Eka Farm */
+  --color-brand: #467f43;
+  --color-brand-hover: #3c6c39;
+  --color-on-brand: #ffffff;
+  --color-accent: #80c14d;
+  --color-leaf: #a9d463;
 
-  --color-ink: #f7fbff;
-  --color-ink-muted: #9fb0c3;
+  /* teks */
+  --color-ink-strong: #212121;
+  --color-ink: #333333;
+  --color-ink-soft: #444444;
+  --color-ink-muted: #5a5a5a;
+  --color-ink-faint: #6f6f6f;
 
-  --color-skeleton-from: #17202b;
-  --color-skeleton-to: #223043;
+  /* status */
+  --color-danger: #b42318;
 
-  --shadow-glow-md: 0 0 26px color-mix(in srgb, var(--color-brand) 18%, transparent);
-  --shadow-glow-lg: 0 0 40px color-mix(in srgb, var(--color-brand) 14%, transparent);
+  /* skeleton */
+  --color-skeleton-from: #eef3ec;
+  --color-skeleton-to: #dde8da;
+
+  --shadow-glow-md: 0 6px 18px color-mix(in srgb, var(--color-brand) 28%, transparent);
+  --shadow-glow-lg: 0 10px 30px color-mix(in srgb, var(--color-brand) 22%, transparent);
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: Inter, system-ui, sans-serif;
   background: var(--color-canvas);
   color: var(--color-ink);
@@ -47,8 +58,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--color-brand) 8%, transparent), transparent 28rem),
-    radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--color-accent) 7%, transparent), transparent 24rem),
+    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--color-leaf) 22%, transparent), transparent 28rem),
+    radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 24rem),
     linear-gradient(180deg, var(--color-canvas) 0%, var(--color-canvas-alt) 48%, var(--color-canvas) 100%);
 }
 
@@ -75,12 +86,12 @@ button:disabled {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-line);
+  background: color-mix(in srgb, var(--color-brand) 35%, transparent);
   border-radius: 999px;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-brand) 28%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
 
 .font-heading {
@@ -98,22 +109,21 @@ button:disabled {
 
 .focus-ring:focus-visible {
   outline-color: var(--color-brand);
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-brand) 25%, transparent);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-brand) 22%, transparent);
 }
 
-.cyber-card {
-  border: 1px solid color-mix(in srgb, var(--color-line) 95%, transparent);
-  background:
-    linear-gradient(180deg, rgb(255 255 255 / 0.025), transparent),
-    color-mix(in srgb, var(--color-card) 92%, transparent);
-  box-shadow: 0 18px 50px rgb(0 0 0 / 0.22);
-  backdrop-filter: blur(16px);
+.panel-card {
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  box-shadow:
+    0 1px 2px rgb(33 33 33 / 0.04),
+    0 12px 32px rgb(33 33 33 / 0.06);
 }
 
 .grid-surface {
   background-image:
-    linear-gradient(color-mix(in srgb, var(--color-accent) 4%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--color-accent) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 12%, transparent) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
