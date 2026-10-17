@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0e14"/>
+  <rect x="80" y="80" width="1040" height="470" rx="32" fill="#121820" stroke="#243041"/>
+  <text x="120" y="230" fill="#f7fbff" font-family="Montserrat, Arial" font-size="72" font-weight="800">WebP Image Converter</text>
+  <text x="120" y="310" fill="#9fb0c3" font-family="Inter, Arial" font-size="34">Private, local browser conversion. No uploads.</text>
+  <path d="M120 410h250" stroke="#00ff66" stroke-width="10" stroke-linecap="round"/>
+  <path d="M850 210h130v110H850z" fill="#171f29" stroke="#00ff66" stroke-width="6"/>
+  <path d="M875 295l28-32 24 22 18-20 32 34" fill="none" stroke="#4fdcff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
