@@ -4,8 +4,8 @@
   "description": "Convert images to WebP locally in your browser.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0e14",
-  "theme_color": "#0a0e14",
+  "background_color": "#fafafa",
+  "theme_color": "#467f43",
   "icons": [
     {
       "src": "/favicon.svg",
